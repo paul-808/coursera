@@ -32,8 +32,9 @@ pollutantmean <- function(directory, pollutant, id){
       id2[i] <- as.character(paste("0",id[i], sep=""))
     }
   }
-  
   paths <- paste(directory,"/",id2,".csv", sep="")
+  
+  i <- 1L
   
   for(i in i:j){
     data <- read.csv(paths[i],header = TRUE)
